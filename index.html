@@ -1,0 +1,954 @@
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<title>Texus 2020 | SRM IST</title>
+
+	<meta name="description" content=""/>
+	<meta name="Keywords" content="texus,srm,ramapuram,event"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Texus 2020" />
+	<meta property="og:site_name" content="Texus 2020" />
+	<meta property="og:url" content="/en/" />
+	<meta property="og:image" content="static/Infinity_white.png" />
+	<meta property="og:description" content="Texus is a culmination achieved when the brilliance of technology meets the creative intuition that is the human brain." />
+    <link rel="shortcut icon" href="infinity_white.png" />
+
+	<style id="loader-styles">
+
+body{background-color: #0d0d0d; overflow: scroll;
+    overflow-x: hidden;overflow-y: hidden;}
+.fullpage,.showreel-mute,.headphone-warning,.showreel-start,.title{display: none;}
+canvas{position: fixed;top:0;bottom: 0;left:0;right:0;z-index: -100;width: 100%;height:100%;}
+.chameleon-loader{
+    display: block;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+	background-color: #0d0d0d;
+}
+@font-face {
+ font-family: "Stolzl";
+ font-weight: 700;
+ src: url("static/fonts/11446.otf") format("opentype");
+}
+.countdown-text{
+    position: relative;
+    font-family: "Stolzl",sans-serif;
+    font-weight: 700;
+    letter-spacing: .5;
+    color: transparent;
+    background: linear-gradient(to top,rgba(178,183,195,0.35) 0%,rgba(36,52,84,1) 95%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+    backface-visibility:         hidden;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20vmin;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+.countdown-wrapper{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+	<link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+   
+
+	 <style>
+
+
+.button.events {
+  left: 0;
+  z-index: 2;
+  border-radius: 0 16px 16px 0; }
+  .button.menu .caption {
+    transform: rotate(-90deg); }
+  .button.menu .hover-caption {
+    transform: translateX(-100%); }
+  .button.menu .hover-inlay {
+    border-radius: 0 16px 16px 0;
+    transform: translateX(-100%);
+    background: linear-gradient(135deg, #fcd560 0%, #f76b1c 100%); 
+	}
+
+
+
+	 .menu-item{
+	 color:white !important;
+     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+	 }
+	canvas{
+	  background: linear-gradient(to right ,#232526, #414345, #141e30, #243b55);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	opacity:0.3;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+	  .intro-container {
+	   font-family: "Stolzl";
+  color: rgb(254, 254, 255);
+  font-weight: 700;
+  font-size: 2vh;
+
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+}
+
+.intro-container {
+  background-image: url('img/background-intro.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+
+  position: absolute;
+  z-index: 2;
+}
+
+.intro-container.fade-out {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.intro-container #blur {
+  background-image: url('img/blur.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+
+  position: absolute;
+  opacity: 0;
+
+  height: 100%;
+  width: 100%;
+}
+
+.intro-container #blur.fade-in {
+  opacity: 1;
+}
+
+.intro-container #sphere-image {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out 2s, opacity 1s linear;
+  -webkit-transition: transform 0.25s ease-in-out 2s, opacity 1s linear;
+  transition: -webkit-transform 0.25s ease-in-out 2s, opacity 1s linear;
+  transition: transform 0.25s ease-in-out 2s, opacity 1s linear;
+
+  background-image: url('img/sphere.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transform: translate(-3%, 2%);
+  transform: translate(-3%, 2%);
+
+  position: absolute;
+  margin: auto;
+  opacity: 0;
+
+  height: 100%;
+  width: 100%;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.intro-container #sphere-image.fade-in {
+  opacity: 1;
+}
+
+.intro-container #sphere-image.zoom {
+  -webkit-transform: translate(-11.2%, 6%) scale(5);
+  transform: translate(-11.2%, 6%) scale(5);
+}
+
+.intro-container #intro-content {
+  position: absolute;
+  margin: auto;
+
+  height: 350px;
+  width: 35%;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.intro-container #intro-content .intro-logo {
+  -webkit-transition: opacity 1s linear 0.5s;
+  transition: opacity 1s linear 0.5s;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  position: absolute;
+  opacity: 0;
+
+  margin: auto;
+  width: 60%;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.intro-container #intro-content .copy-container {
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  text-transform: uppercase;
+  position: absolute;
+  opacity: 0;
+
+  letter-spacing: 40px;
+  font-weight: 100;
+  font-size: 32px;
+}
+
+.intro-container #intro-content .copy-container.maze {
+  left: 0;
+  top: 0;
+}
+
+.intro-container #intro-content .copy-container.lith {
+  bottom: 0;
+  right: 0;
+}
+
+.intro-container #intro-content.fade-in .intro-logo,
+.intro-container #intro-content.fade-in .copy-container {
+  opacity: 1;
+}
+
+.intro-container #intro-content.fade-out .intro-logo,
+.intro-container #intro-content.fade-out .copy-container {
+  opacity: 0;
+}
+
+.copy-container .copy h1 {
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000), opacity 0.8s;
+  -webkit-transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000), opacity 0.8s;
+  transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000), opacity 0.8s;
+  transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000), opacity 0.8s;
+
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+  opacity: 0;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  font-weight: 600;
+  font-size: 5vh;
+}
+
+.copy-container .copy h1.show {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+.copy-container .copy h3 {
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  -webkit-transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 2vh;
+}
+
+.copy-container .copy h3.show {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+
+.copy-container .copy h4 {
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  -webkit-transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+  transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.25s, opacity 0.8s 0.25s;
+
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+  opacity: 0;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.copy-container .copy h4.show {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+
+.copy-container .copy p {
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.5s, opacity 0.8s 0.25s;
+  -webkit-transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.5s, opacity 0.8s 0.25s;
+  transition: -webkit-transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.5s, opacity 0.8s 0.25s;
+  transition: transform 0.8s cubic-bezier(0.770,  0.000, 0.175, 1.000) 0.5s, opacity 0.8s 0.25s;
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+  opacity: 0;
+  letter-spacing: 1.2px;
+  margin-top: 35px;
+  line-height: 3vh;
+  font-weight: 300;
+  font-size: 2vh;
+  width: 520px;
+  text-align: justify;
+}
+
+.copy-container .copy p.show {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+  .intro-container #intro-content .intro-logo {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .intro-container {
+    background-image: url('img/mobile-background-intro.jpg');
+  }
+
+  .intro-container #intro-content .intro-logo {
+    padding-right: 45px;
+  }
+
+  .intro-container #intro-content {
+    width: 75%;
+  }
+
+  .intro-container #blur {
+    background-image: url('img/mobile-blur.png');
+  }
+
+  .intro-container #sphere-image {
+    background-image: url('img/mobile-sphere.png');
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .intro-container #intro-content {
+    height: 200px;
+  }
+
+  .intro-container #intro-content .intro-logo {
+    padding-right: 25px;
+  }
+
+  .intro-container #intro-content .copy-container {
+    letter-spacing: 25px;
+    font-size: 20px;
+  }
+
+}
+
+
+/* MODAL CSS*/
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  font-family: "Stolzl";
+  left:50%;
+  top:50%;
+  width:440px;
+  height:850px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 5px;
+  text-align: center;
+}
+#boxes #dialog {
+  font-family: "Stolzl";
+  width:450px; 
+  height:auto;
+  background-color:#26262c;
+  font-weight: 400;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  font-size: 15pt;
+}
+
+.close.agree {
+    float:right; 
+    margin-right: -25px; 
+    margin-top: -20px;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    #boxes .window {
+         width:200px !important;
+         height:325px !important;
+    }
+    
+}
+
+
+	  </style>
+	  <script src="test.js"></script>
+
+	 <link rel="stylesheet" href="particle.css" />
+
+
+
+
+</head>
+<body class="body">
+
+<div class="fullpage chameleon-loader loading" style="z-index:100;">
+    <div class="title">
+    	Texus 2020
+    </div>
+    <div class="headphone-warning">
+        For better experience use headphones
+    </div>
+    <div class="countdown-wrapper">
+        <div class="countdown-text">
+	    </div>
+    </div>
+    <div class="video-backdrop">
+        <video
+        webkit-playsinline
+        playsinline
+        class=""
+        data-src="https://m.ecstasycreatives.com/texus2020/texus_intro.mp4"
+        </video>
+    </div>
+    <a class="showreel-start">
+        SKIP
+    </a>
+    <div class="showreel-mute sound-toggle">
+        <div class="icon mask headset"></div>
+        <div class="gradient-clip sound-on">ON</div>
+        <div class="gradient-clip sound-off">OFF</div>
+    </div>
+    <script>
+    (function() {
+        var interv,i = 1;
+        var dn = document.querySelector(".countdown-text");
+        var k = false;
+        try{k = window.localStorage.getItem("visited");}catch(e){}
+        if(k){return};
+        interv = setInterval(function(){
+          dn.innerText = i<10?"0"+i:i;
+          window.chamCounter = i;
+          i+=1;
+          if(window.chamStopCounter || i>99){clearInterval(interv);}
+      },140);
+    }());
+	</script>
+</div>
+
+
+
+
+
+
+   <div id="intro" class="intro-container">
+        <div id="blur" style="display: none;"></div>
+        <div id="sphere-image" style="display: none; -webkit-transform: translate(-3%, 2%); transform: translate(-3%, 2%);"></div>
+
+        <div id="intro-content" style="display: none;">
+          <img src="infinity_white.png" class="intro-logo">
+
+          <div class="copy-container maze" id="bada">
+            <span>TEXUS</span>
+          </div>
+
+          <div class="copy-container lith" id="bada">
+            <span>2020</span>
+          </div>
+        </div>
+
+		 <div id="cookies" class="cookie-banner" style="display:none;">
+        <div class="banner-wrapper">
+          <p></p>
+          <button id="cookies-button">I Accept</button>
+        </div>
+      </div>
+
+      </div>
+      
+<!--Postponed Modal-->      
+      <div id="boxes">
+            <div id="dialog" class="window"> 
+            <div id="san">
+            <a href="#" class="close agree"><img src="close-icon.png" width="25"></a>
+            <p>Due to Corona virus outbreak worldwide and UGC (University Grants Commission of India) norms, the authorities have decided to postpone Texus 2020. Stay Tuned We Will Be Back Soon!
+            </p>
+            </div>
+            </div>
+            <div style="width: 2478px; font-size: 32pt; color:white; height: 1202px; display: none; opacity: 0.4;" id="mask"></div>
+            </div>
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+    <script>
+    $(document).ready(function() {	
+
+		var id = '#dialog';
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(2000);	
+		$('#mask').fadeTo("slow",0.9);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		$(id).fadeIn(2000); 	
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});		
+	
+});
+    </script>
+<!--END OF THE MODAL -->    
+    
+	   <div id="particles-js"></div>
+	   <script src="particle.js"></script>
+
+    <div id="chameleon-page-container" class="fullpage block-main ">
+
+
+		<div class="chameleon-page-content" data-namespace="index">
+
+
+<div class="title">
+	<p id="srmfont" class=" grad-menu" style="color:white !important; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+		SRM IST RAMAPURAM
+	</p>
+	<div class="main-langs">
+
+<p id="subfont" class="skip menu-item font-caption grad-menu no-barba" style="color:white !important;">
+   DEPARTMENT OF CSE
+</p>
+<!--<div class="separator-left"></div>
+<p id="subfont" class="skip menu-item font-caption grad-menu no-barba" rel="noopener noreferrer" style="color:white !important;">
+    Chennai
+</p> -->
+
+	</div>
+</div>
+<div class="menu-main-container fit-container ccenter">
+	<div class="fit-contain flex-column ccenter">
+
+
+<p id="texus" class="menu-item flex-equal  fx-hover fx-hover-neon fx-appear-blackbars" style=" text-shadow: 6px 6px 0px rgba(0,0,0,0.2) !important;   color: white; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;" href="">
+    Texus
+</p>
+
+
+<p id="texus" class="menu-item flex-equal  fx-hover fx-hover-neon fx-appear-blackbars" style=" text-shadow: 6px 6px 0px rgba(0,0,0,0.2) !important;   color: white; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;" href="">
+    2020
+</p>
+
+
+<div class="title-bottom">
+<p id="orgfont" class=" grad-menu" style="color:white !important; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+		Very Soon</p>
+</div>
+
+	</div>
+</div>
+
+
+
+
+		</div>
+        <div class="button menu">
+            <div class="caption" style="color:white !important; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+                    Overview
+            </div>
+            <div class="hover-inlay">
+            </div>
+            <div class="hover-caption">
+                <div class="caption">
+                    Overview
+                </div>
+            </div>
+        </div>
+              
+	
+		<a href="https://events.texus.io/" target="_blank">
+		<div class="button events">
+				<div class="caption" style="color:white !important; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+					Events
+				</div>
+				<div class="hover-inlay">
+				</div>
+				<div class="hover-caption">
+					<div class="caption">
+					Events
+					</div>
+				</div>
+			</div>
+			</a>
+        
+        <a href="https://rush.texus.io/" target="_blank">
+		<div class="button rush">
+            <div class="caption" style="color:white !important; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+                    Hackathon
+            </div>
+            <div class="hover-inlay">
+            </div>
+            <div class="hover-caption">
+                <div class="caption">
+                    Hackathon
+                </div>
+            </div>
+        </div>
+		</a>
+			
+			
+        <div class="button connect">
+            <div class="caption" style="color:white !important; text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+                    Connect
+            </div>
+            <div class="hover-inlay">
+            </div>
+            <div class="hover-caption">
+                <div class="caption">
+                     Connect
+                </div>
+            </div>
+        </div>
+	
+			
+		<style>
+		@media screen and (max-width : 1920px){
+		  .vrbtn.only-mobile{
+		  visibility:hidden;
+		  }
+		}
+		@media screen and (max-width : 906px){
+		 .desk{
+		  visibility:hidden;
+		  }
+		 .vrbtn.only-mobile{
+		  visibility:visible;
+		  }
+		}
+		
+		.modal {
+		  display: none; 
+		  position: fixed; 
+		  z-index: 1; 
+		  left: 0;
+		  top: 0;
+		  width: 100%; 
+		  height: 100%; 
+		  overflow: auto; 
+		  background-color: rgb(0,0,0); 
+		  background-color: rgba(0,0,0,0.4); 
+		 
+		   
+		}
+
+		.modal-content {
+		  font-family: "Stolzl";
+		  color: white;
+          font-weight: 600;
+		  font-size: 1.2vw;
+		  background-color: rgba(82, 75, 94,0.7);
+		  margin: 15% auto; 
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 30%; 
+		
+		}
+
+		.close {
+		  color: #aaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		  color: black;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		</style>
+		
+        <a class="vrbtn desk trigger" style="box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.22);" id="ar_modal">
+		   <div class="icon vr">
+            </div>
+            <span style="text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+                GAME
+            </span>
+        </a>
+		 
+		 
+		<a class="vrbtn only-mobile" style="box-shadow: 0 19px 38px rgba(0,0,0,0.50), 0 15px 12px rgba(0,0,0,0.22);" href="https://texus.io/ar/">
+		   <div class="icon vr">
+            </div>
+            <span style="text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 3px, rgba(0, 0, 0, 0.1) 0px 8px 13px, rgba(0, 0, 0, 0.1) 0px 18px 23px;">
+                GAME
+            </span>
+        </a>
+		
+		<div id="myModal" class="modal">
+          <div class="modal-content">
+			<span class="close">&times;</span>
+			<p>OOPS!<br>This feature cannot be used in Desktop or Laptops, please visit the website in mobile or tablet to play the game.</p>
+		  </div>
+
+		</div>
+		
+		<script>
+		// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("ar_modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+		</script>
+		
+		
+		
+		<!-- <img src="img/sphere.png" class="sphere-img">
+         <style>
+		 	 .sphere-img {
+			  margin-top: 300px;
+			  right: 300px;
+			}
+		 </style> -->
+
+    </div>
+	<!--<video id="placeholder-video" style="display:none">-->
+
+
+
+
+
+
+<div class="fullpage block-menu">
+	<div class="title stick-right">
+		<div class="go-back fx-hover fx-no-gyro">
+			<div class="icon mask back flipped fx-hover-gradient grad-arrow fx-by-parent">
+			</div>
+		</div>
+	</div>
+	<p class="studio-tag no-barba" style="color:white !important;" >
+		SRM INSTITUTE OF SCIENCE & TECHNOLOGY
+	</p>
+	<div class="page-container center">
+		<div class="menu">
+				<div class="center">
+
+<p class="skip menu-item font-caption grad-menu no-barba" style="color:white !important;" >
+    TEXUS
+</p>
+<div class="separator-left"></div>
+<p class="skip menu-item font-caption grad-menu no-barba" rel="noopener noreferrer" style="color:white !important;" >
+    2020
+</p>
+
+				</div>
+				<a class="menu-item  grad-menu fx-hover" style="color:white !important;" href="about.html">
+					About Texus
+				</a>
+		<!--		<a class="menu-item  grad-menu fx-hover link-showreel" style="color:white !important;" href="construction.html" >
+					Events
+				</a>
+				<a class="menu-item  grad-menu fx-hover" style="color:white !important;" href="construction.html">
+					Hackathon
+				</a>
+ -->
+
+
+
+<a class="hide-m-landscape menu-item  grad-menu fx-hover" style="color:white !important;" href="texus2019.html">
+Texus 2019
+</a>
+
+<a class="hide-m-landscape menu-item  grad-menu fx-hover" href="texus2018.html" style="color:white !important;">
+Texus 2018
+</a>
+
+
+
+
+				<a class="menu-item grad-menu fx-hover link-connect" style="color:white !important;">
+					Connect
+				</a>
+
+		</div>
+	</div>
+</div>
+<div class="fx-gradient-backdrop grad-menu">
+</div>
+
+
+
+
+<div class="fullpage block-connect">
+	<div class="title stick-left">
+		<div class="go-back fx-hover fx-no-gyro">
+			<div class="icon mask back fx-hover-gradient grad-arrow fx-by-parent">
+			</div>
+		</div>
+	</div>
+	<a class="studio-tag no-barba" href="https://www.srmist.edu.in/ramapuram/" target="_blank" style="color:white !important;">
+		SRM INSTITUTE OF SCIENCE & TECHNOLOGY
+	</a>
+	<div class="page-container center">
+		<div class="column">
+			<div class="icon-block">
+				<a class="icon mask insta fx-hover-gradient grad-connect  fx-hover no-barba" href="https://www.instagram.com/srmtexus" target="_blank" rel="noopener noreferrer">
+				</a>
+				<a class="icon mask fb fx-hover-gradient grad-connect  fx-hover no-barba" href="https://facebook.com/srmtexus/" target="_blank" rel="noopener noreferrer">
+				</a>
+				<a class="icon mask twitter fx-hover-gradient grad-connect  fx-hover no-barba" href="https://twitter.com/srmtexus/" target="_blank" rel="noopener noreferrer">
+				</a>
+			</div>
+
+
+<div class="connect-header">
+    You can mail us
+</div>
+<a class="connect-link grad-connect fx-hover no-barba" style="color:white !important;" href="mailto:srmtexus@gmail.com">
+    srmtexus@gmail.com
+</a>
+
+
+		</div>
+	</div>
+</div>
+<div class="fx-gradient-backdrop grad-connect">
+</div>
+
+
+
+
+	<script src="static/js/backgroundd387.js?v8" async defer></script>
+<script src="static/js/bundle9352.js?v219" async defer></script>
+
+</body>
+</html>

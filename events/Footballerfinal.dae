@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Rishi</author>
+      <authoring_tool>Adobe Photoshop</authoring_tool>
+      <comments>Photoshop Build Version - 20180920.r.24 x6</comments>
+    </contributor>
+    <created>2020-01-30T10:58:21Z</created>
+    <modified>2020-01-30T10:58:21Z</modified>
+    <unit meter="0.001" name="meter"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_visual_scenes>
+    <visual_scene id="DefaultScene">
+      <node id="Infinite_Light_1" name="Infinite_Light_1" type="NODE">
+        <lookat>0 0 0 -0.074319 -0.592357 -0.800132 0 1 0</lookat>
+        <instance_light url="#Infinite_Light_2"/>
+      </node>
+      <node id="Image_Based_Light_1" name="Image_Based_Light_1" type="NODE">
+        <instance_light url="#Image_Based_Light_2"/>
+      </node>
+      <node id="root" name="root" type="NODE">
+        <matrix>14806.9 0 0 -7.44835 0 14806.9 0 3.78677e6 0 0 14806.9 -3.55809e6 0 0 0 1</matrix>
+        <node id="node_id18" name="node_id18" type="NODE">
+          <matrix>0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1</matrix>
+          <node id="node_id6" name="node_id6" type="NODE">
+            <matrix>0.000005 0.000005 73.1421 -55.3428 -73.1421 0 0.000005 -87.4828 0 -73.1421 0.000005 307.68 0 0 0 1</matrix>
+            <instance_geometry url="#mesh_id7">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="__PS_3D_Default" target="#__PS_3D_Default"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <node id="node_id8" name="node_id8" type="NODE">
+              <matrix>1 0 0 0 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#mesh_id9">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="__PS_3D_Default" target="#__PS_3D_Default"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+              <extra type="pivot_use">
+                <technique profile="ADOBE">
+                  <use_pivot>
+                    <needPivot>0</needPivot>
+                  </use_pivot>
+                </technique>
+              </extra>
+            </node>
+            <node id="node_id10" name="node_id10" type="NODE">
+              <matrix>1 0 0 0 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#mesh_id11">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="__PS_3D_Default" target="#__PS_3D_Default"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+              <extra type="pivot_use">
+                <technique profile="ADOBE">
+                  <use_pivot>
+                    <needPivot>0</needPivot>
+                  </use_pivot>
+                </technique>
+              </extra>
+            </node>
+            <node id="node_id12" name="node_id12" type="NODE">
+              <matrix>1 0 0 0 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#mesh_id13">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="__PS_3D_Default" target="#__PS_3D_Default"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+              <extra type="pivot_use">
+                <technique profile="ADOBE">
+                  <use_pivot>
+                    <needPivot>0</needPivot>
+                  </use_pivot>
+                </technique>
+              </extra>
+            </node>
+            <node id="node_id14" name="node_id14" type="NODE">
+              <matrix>1 0 0 0 0 1 0 -0.000001 0 0 1 0 0 0 0 1</matrix>
+              <instance_geometry url="#mesh_id15">
+                <bind_material>
+                  <technique_common>
+                    <instance_material symbol="__PS_3D_Default" target="#__PS_3D_Default"/>
+                  </technique_common>
+                </bind_material>
+              </instance_geometry>
+              <extra type="pivot_use">
+                <technique profile="ADOBE">
+                  <use_pivot>
+                    <needPivot>0</needPivot>
+                  </use_pivot>
+                </technique>
+              </extra>
+            </node>
+            <extra type="pivot_use">
+              <technique profile="ADOBE">
+                <use_pivot>
+                  <needPivot>0</needPivot>
+                </use_pivot>
+              </technique>
+            </extra>
+          </node>
+          <node id="node_id16" name="node_id16" type="NODE">
+            <matrix>2.98968 0 0 -35.1204 0 -0.000000 2.98968 -252.932 0 -2.98968 -0.000000 159.734 0 0 0 1</matrix>
+            <instance_geometry url="#mesh_id17">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="__PS_3D_Default" target="#__PS_3D_Default"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra type="pivot_use">
+              <technique profile="ADOBE">
+                <use_pivot>
+                  <needPivot>0</needPivot>
+                </use_pivot>
+              </technique>
+            </extra>
+          </node>
+          <extra type="pivot_use">
+            <technique profile="ADOBE">
+              <use_pivot>
+                <needPivot>0</needPivot>
+              </use_pivot>
+            </technique>
+          </extra>
+        </node>
+        <extra type="pivot_use">
+          <technique profile="ADOBE">
+            <use_pivot>
+              <needPivot>0</needPivot>
+            </use_pivot>
+          </technique>
+        </extra>
+      </node>
+      <extra type="background_image_type">
+        <technique profile="ADOBE">
+          <type>
+            <image_type>0</image_type>
+          </type>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#DefaultScene"/>
+  </scene>
+</COLLADA>

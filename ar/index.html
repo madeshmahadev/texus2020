@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Texus Game | Texus 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'>
+  
+  <link rel="icon" href="infinity_white.png" />
+  <link rel="stylesheet" href="./style.css">
+  
+    <!-- modified pacman -->
+    <script src="pacman.js"></script>
+    <script src="modernizr-1.5.min.js"></script>
+  
+    <!-- JEELIZ FACE FILTER API (required by HeadControls.js) : -->
+    <script src="dist/jeelizFaceFilter.js"></script>
+ 
+    <!-- HEAD CONTROLLER : -->
+    <script src="helpers/HeadControls.js"></script>
+
+    <!-- main script : -->
+    <script src="main.js"></script>
+    
+ 
+
+
+</head>
+
+<body onload='main()'>
+<h1 class="text-light">HEAD CONTROLLED PANDA</h1>
+
+<div class="content">
+	 <div id="left">
+		<div id="pacman"></div>
+	 </div>
+	 
+	 <div id="right">
+		<canvas id='headControlsCanvas' width='250' height='250'></canvas>  
+	 </div>
+</div>
+         <p style="display: none;">
+         <input id='disableGhosts' type='checkbox' /> DISABLE GHOSTS
+        </p>
+		
+		
+		<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+			<a id='start' class="d-block btn btn-outline-light">START</a>
+		</div>
+
+   
+<h6 class="text-light small font-weight-bold">WITH <i class="fas fa-heart"></i> TEXUS 2020</h6>
+
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+        
+        <div class="modal show" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" >How To Play</h4>
+                </div>
+                <div class="modal-body">
+                  <p style="color: black;">• Scroll down & press start to begin.<br>
+                     • Make sure your face is focoused in the blue box.<br>
+                     • Move your head up, down, left and right to move.<br>
+                     • Hope you enjoy the game<br>
+                     • Please share 😊</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Let's Play</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+		
+		<script type="text/javascript">
+            $(window).on('load',function(){
+                $('#myModal').modal('show');
+            });
+        </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

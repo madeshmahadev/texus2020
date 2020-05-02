@@ -1,0 +1,309 @@
+:root {
+  --ship-size: 10vmin;
+  --sky-color: #1C1740;
+  --ship-color: #F9E2FE;
+  --ship-cap-color: crimson;
+  --ship-wing-color: #4C3198;
+  --ship-window-trim-color: #4C3198;
+  --ship-booster-color: #C38382;
+  --star-color: white;
+  --stars-sm-speed: 5s;
+  --stars-md-speed: 2s;
+  --stars-lg-speed: 1s;
+}
+
+.ship,
+.star-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  will-change: transform;
+  transition: transform 0.4s ease;
+  transform: translate(-50%, -50%);
+}
+
+.star-field {
+  width: 200%;
+  height: 200%;
+  transition: transform 1s ease-out;
+}
+
+.hover-area {
+  flex-grow: 1;
+  z-index: 2;
+}
+.hover-area:nth-child(1):hover ~ .ship, .hover-area:nth-child(1):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.hover-area:nth-child(2):hover ~ .ship, .hover-area:nth-child(2):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-80deg);
+}
+.hover-area:nth-child(3):hover ~ .ship, .hover-area:nth-child(3):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-70deg);
+}
+.hover-area:nth-child(4):hover ~ .ship, .hover-area:nth-child(4):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+.hover-area:nth-child(5):hover ~ .ship, .hover-area:nth-child(5):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-50deg);
+}
+.hover-area:nth-child(6):hover ~ .ship, .hover-area:nth-child(6):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-40deg);
+}
+.hover-area:nth-child(7):hover ~ .ship, .hover-area:nth-child(7):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+.hover-area:nth-child(8):hover ~ .ship, .hover-area:nth-child(8):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+.hover-area:nth-child(9):hover ~ .ship, .hover-area:nth-child(9):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+.hover-area:nth-child(10):hover ~ .ship, .hover-area:nth-child(10):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.hover-area:nth-child(11):hover ~ .ship, .hover-area:nth-child(11):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.hover-area:nth-child(12):hover ~ .ship, .hover-area:nth-child(12):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+.hover-area:nth-child(13):hover ~ .ship, .hover-area:nth-child(13):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(20deg);
+}
+.hover-area:nth-child(14):hover ~ .ship, .hover-area:nth-child(14):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+.hover-area:nth-child(15):hover ~ .ship, .hover-area:nth-child(15):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(40deg);
+}
+.hover-area:nth-child(16):hover ~ .ship, .hover-area:nth-child(16):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(50deg);
+}
+.hover-area:nth-child(17):hover ~ .ship, .hover-area:nth-child(17):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hover-area:nth-child(18):hover ~ .ship, .hover-area:nth-child(18):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(70deg);
+}
+.hover-area:nth-child(19):hover ~ .ship, .hover-area:nth-child(19):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(80deg);
+}
+.hover-area:nth-child(20):hover ~ .ship, .hover-area:nth-child(20):hover ~ .star-field {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.hover-area:active ~ .star-field .stars-sm:before, .hover-area:active ~ .star-field .stars-sm:after {
+  animation-duration: calc(var(--stars-sm-speed) / 2);
+}
+.hover-area:active ~ .star-field .stars-sm:after {
+  animation-delay: calc(var(--stars-sm-speed) / -4);
+}
+.hover-area:active ~ .star-field .stars-md:before, .hover-area:active ~ .star-field .stars-md:after {
+  animation-duration: calc(var(--stars-md-speed) / 2);
+}
+.hover-area:active ~ .star-field .stars-md:after {
+  animation-delay: calc(var(--stars-md-speed) / -4);
+}
+.hover-area:active ~ .star-field .stars-lg:before, .hover-area:active ~ .star-field .stars-lg:after {
+  animation-duration: calc(var(--stars-lg-speed) / 2);
+}
+.hover-area:active ~ .star-field .stars-lg:after {
+  animation-delay: calc(var(--stars-lg-speed) / -4);
+}
+.hover-area:active ~ .ship .wrapper {
+  animation: speed-up-ship 80ms linear infinite alternate;
+}
+.hover-area:active ~ .ship .exhaust {
+  animation: speed-up-exhaust 80ms linear infinite alternate;
+}
+
+.ship .wrapper {
+  display: flex;
+}
+
+.ship .body {
+  position: relative;
+  background-color: var(--ship-color);
+  border-radius: 0 0 50% 50% / 76% 76% 15% 15%;
+}
+.ship .body:before {
+  content: '';
+  position: absolute;
+  border-radius: 50% 50% 50% 50% / 76% 76% 25% 25%;
+}
+
+.ship .main {
+  width: var(--ship-size);
+  height: calc(var(--ship-size) * 1.5);
+  box-shadow: inset rgba(0, 0, 0, 0.15) -0.5vmin 0 2vmin 0;
+}
+.ship .main:before {
+  bottom: 80%;
+  width: 100%;
+  height: 75%;
+  background-color: inherit;
+  box-shadow: inset rgba(0, 0, 0, 0.15) -0.5vmin 1vmin 1vmin 0;
+}
+.ship .main:after {
+  content: '';
+  position: absolute;
+  bottom: 75%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: calc(var(--ship-size) / 15) solid var(--ship-window-trim-color);
+  width: calc(var(--ship-size) / 1.8);
+  height: calc(var(--ship-size) / 1.8);
+  box-shadow: inset rgba(0, 0, 0, 0.075) -2vmin -2vmin 0 0, inset rgba(0, 0, 0, 0.1) -1vmin -1.5vmin 0 0;
+  border-radius: 100%;
+}
+
+.ship .side {
+  width: calc(var(--ship-size) / 3);
+  height: var(--ship-size);
+  box-shadow: inset rgba(0, 0, 0, 0.1) -0.5vmin 0 1vmin 0, inset rgba(0, 0, 0, 0.1) 0.5vmin 0 1vmin 0;
+}
+.ship .side:before {
+  bottom: 90%;
+  width: 100%;
+  height: 35%;
+  background-color: var(--ship-cap-color);
+  box-shadow: inset rgba(0, 0, 0, 0.2) -0.5vmin 1vmin 1vmin 0, inset rgba(255, 255, 255, 0.2) 0.5vmin 1vmin 1vmin 0;
+}
+.ship .side.left {
+  left: 1px;
+}
+.ship .side.right {
+  right: 1px;
+}
+
+.ship .wing {
+  position: absolute;
+  bottom: 2vmin;
+  background-color: var(--ship-wing-color);
+  width: calc(var(--ship-size) / 2);
+  height: calc(var(--ship-size) / 1.5);
+  z-index: 4;
+  box-shadow: inset rgba(0, 0, 0, 0.1) -0.5vmin 1vmin 1vmin 0, inset rgba(255, 255, 255, 0.1) 0.5vmin 1vmin 1vmin 0;
+}
+.ship .wing.left {
+  right: 100%;
+  border-radius: 100% 0 10% 10%;
+}
+.ship .wing.right {
+  left: 100%;
+  border-radius: 0 100% 10% 10%;
+}
+
+.ship .booster {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(var(--ship-size) / 1.2);
+  height: calc(var(--ship-size) / 2.5);
+  background-color: var(--ship-booster-color);
+  border-radius: 0 0 50% 50% / 76% 76% 35% 35%;
+  z-index: -1;
+  box-shadow: inset rgba(0, 0, 0, 0.3) -0.5vmin 1vmin 1vmin 0, inset rgba(255, 255, 255, 0.3) 0.5vmin 1vmin 1vmin 0, black 0 0 2vmin;
+}
+
+.ship .exhaust {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(var(--ship-size) / 1.4);
+  height: 80%;
+  border-radius: 0 0 100% 100%;
+  background-image: linear-gradient(to bottom, yellow, transparent 70%);
+  z-index: -2;
+  transform-origin: 50% 0;
+  animation: exhaust 0.1s linear alternate infinite;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.stars:before, .stars:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: stars linear infinite;
+  transform: translateY(-100vh);
+}
+.stars-sm {
+  width: 1px;
+  height: 1px;
+}
+.stars-sm:before, .stars-sm:after {
+  box-shadow: 30vw 131vh var(--star-color), 32vw 119vh var(--star-color), 39vw 132vh var(--star-color), 170vw 53vh var(--star-color), 55vw 139vh var(--star-color), 31vw 83vh var(--star-color), 109vw 2vh var(--star-color), 80vw 169vh var(--star-color), 7vw 31vh var(--star-color), 168vw 78vh var(--star-color), 174vw 72vh var(--star-color), 44vw 162vh var(--star-color), 70vw 21vh var(--star-color), 12vw 189vh var(--star-color), 63vw 3vh var(--star-color), 190vw 91vh var(--star-color), 179vw 187vh var(--star-color), 26vw 197vh var(--star-color), 67vw 56vh var(--star-color), 86vw 100vh var(--star-color), 108vw 158vh var(--star-color), 35vw 93vh var(--star-color), 70vw 163vh var(--star-color), 109vw 14vh var(--star-color), 137vw 40vh var(--star-color), 99vw 20vh var(--star-color), 90vw 32vh var(--star-color), 51vw 169vh var(--star-color), 166vw 73vh var(--star-color), 161vw 127vh var(--star-color), 117vw 125vh var(--star-color), 193vw 173vh var(--star-color), 11vw 110vh var(--star-color), 28vw 88vh var(--star-color), 5vw 22vh var(--star-color), 178vw 86vh var(--star-color), 87vw 199vh var(--star-color), 171vw 44vh var(--star-color), 8vw 185vh var(--star-color), 113vw 200vh var(--star-color), 56vw 173vh var(--star-color), 109vw 156vh var(--star-color), 129vw 124vh var(--star-color), 114vw 37vh var(--star-color), 184vw 30vh var(--star-color), 68vw 143vh var(--star-color), 180vw 164vh var(--star-color), 174vw 34vh var(--star-color), 75vw 105vh var(--star-color), 166vw 4vh var(--star-color), 182vw 192vh var(--star-color), 12vw 106vh var(--star-color), 186vw 162vh var(--star-color), 39vw 20vh var(--star-color), 87vw 165vh var(--star-color), 109vw 191vh var(--star-color), 79vw 99vh var(--star-color), 109vw 130vh var(--star-color), 123vw 66vh var(--star-color), 138vw 64vh var(--star-color), 181vw 22vh var(--star-color), 74vw 67vh var(--star-color), 186vw 167vh var(--star-color), 6vw 96vh var(--star-color), 155vw 144vh var(--star-color), 58vw 38vh var(--star-color), 111vw 42vh var(--star-color), 19vw 35vh var(--star-color), 15vw 103vh var(--star-color), 160vw 106vh var(--star-color), 84vw 111vh var(--star-color), 74vw 167vh var(--star-color), 67vw 5vh var(--star-color), 13vw 192vh var(--star-color), 107vw 101vh var(--star-color), 68vw 172vh var(--star-color), 63vw 72vh var(--star-color), 11vw 5vh var(--star-color), 88vw 160vh var(--star-color), 198vw 140vh var(--star-color), 13vw 44vh var(--star-color), 96vw 48vh var(--star-color), 154vw 185vh var(--star-color), 65vw 28vh var(--star-color), 113vw 105vh var(--star-color), 173vw 47vh var(--star-color), 108vw 19vh var(--star-color), 131vw 36vh var(--star-color), 81vw 133vh var(--star-color), 129vw 71vh var(--star-color), 54vw 32vh var(--star-color), 13vw 141vh var(--star-color), 150vw 103vh var(--star-color), 150vw 108vh var(--star-color), 188vw 24vh var(--star-color), 187vw 181vh var(--star-color), 159vw 61vh var(--star-color), 78vw 57vh var(--star-color), 99vw 114vh var(--star-color), 173vw 35vh var(--star-color), 58vw 139vh var(--star-color), 86vw 106vh var(--star-color), 116vw 26vh var(--star-color), 5vw 156vh var(--star-color), 173vw 101vh var(--star-color), 31vw 10vh var(--star-color), 5vw 182vh var(--star-color), 105vw 120vh var(--star-color), 67vw 118vh var(--star-color), 69vw 7vh var(--star-color), 194vw 58vh var(--star-color), 41vw 121vh var(--star-color), 40vw 145vh var(--star-color), 168vw 154vh var(--star-color), 55vw 124vh var(--star-color), 18vw 106vh var(--star-color), 179vw 3vh var(--star-color), 85vw 144vh var(--star-color), 76vw 132vh var(--star-color), 63vw 65vh var(--star-color), 88vw 92vh var(--star-color), 110vw 77vh var(--star-color), 190vw 150vh var(--star-color), 100vw 89vh var(--star-color), 95vw 105vh var(--star-color), 38vw 128vh var(--star-color), 13vw 117vh var(--star-color), 153vw 104vh var(--star-color), 74vw 3vh var(--star-color), 166vw 42vh var(--star-color), 66vw 10vh var(--star-color), 54vw 51vh var(--star-color), 192vw 95vh var(--star-color), 24vw 84vh var(--star-color), 87vw 31vh var(--star-color), 157vw 63vh var(--star-color), 66vw 86vh var(--star-color), 21vw 23vh var(--star-color), 36vw 145vh var(--star-color), 76vw 2vh var(--star-color), 6vw 125vh var(--star-color), 112vw 28vh var(--star-color), 105vw 199vh var(--star-color), 118vw 155vh var(--star-color), 146vw 141vh var(--star-color), 20vw 69vh var(--star-color), 90vw 83vh var(--star-color), 175vw 168vh var(--star-color), 160vw 79vh var(--star-color), 121vw 129vh var(--star-color), 125vw 28vh var(--star-color), 33vw 159vh var(--star-color), 176vw 37vh var(--star-color), 198vw 169vh var(--star-color), 172vw 171vh var(--star-color), 32vw 138vh var(--star-color), 55vw 171vh var(--star-color), 36vw 51vh var(--star-color), 125vw 59vh var(--star-color), 58vw 27vh var(--star-color), 90vw 94vh var(--star-color), 21vw 144vh var(--star-color), 152vw 166vh var(--star-color), 152vw 62vh var(--star-color), 83vw 127vh var(--star-color), 40vw 57vh var(--star-color), 27vw 51vh var(--star-color), 81vw 124vh var(--star-color), 80vw 94vh var(--star-color), 112vw 100vh var(--star-color), 151vw 128vh var(--star-color), 101vw 24vh var(--star-color), 54vw 15vh var(--star-color), 1vw 190vh var(--star-color), 131vw 141vh var(--star-color), 199vw 191vh var(--star-color), 182vw 12vh var(--star-color), 192vw 56vh var(--star-color), 182vw 102vh var(--star-color), 140vw 123vh var(--star-color), 143vw 95vh var(--star-color), 86vw 61vh var(--star-color), 62vw 31vh var(--star-color), 30vw 143vh var(--star-color), 87vw 195vh var(--star-color), 3vw 38vh var(--star-color), 96vw 96vh var(--star-color), 113vw 165vh var(--star-color), 200vw 38vh var(--star-color), 171vw 106vh var(--star-color), 27vw 42vh var(--star-color), 28vw 34vh var(--star-color), 140vw 60vh var(--star-color), 200vw 161vh var(--star-color), 131vw 133vh var(--star-color), 2vw 16vh var(--star-color), 142vw 82vh var(--star-color), 87vw 153vh var(--star-color), 8vw 62vh var(--star-color), 93vw 177vh var(--star-color), 153vw 81vh var(--star-color), 74vw 8vh var(--star-color), 159vw 76vh var(--star-color), 139vw 75vh var(--star-color), 104vw 18vh var(--star-color), 181vw 148vh var(--star-color), 147vw 59vh var(--star-color), 33vw 51vh var(--star-color), 57vw 21vh var(--star-color), 16vw 36vh var(--star-color), 60vw 68vh var(--star-color), 131vw 5vh var(--star-color), 10vw 3vh var(--star-color), 165vw 140vh var(--star-color), 90vw 132vh var(--star-color), 77vw 168vh var(--star-color), 118vw 146vh var(--star-color), 105vw 129vh var(--star-color), 45vw 128vh var(--star-color), 66vw 127vh var(--star-color), 20vw 186vh var(--star-color), 159vw 158vh var(--star-color), 149vw 79vh var(--star-color), 107vw 195vh var(--star-color), 130vw 11vh var(--star-color), 58vw 108vh var(--star-color), 170vw 86vh var(--star-color), 167vw 100vh var(--star-color), 36vw 147vh var(--star-color), 12vw 61vh var(--star-color), 111vw 18vh var(--star-color), 177vw 132vh var(--star-color), 91vw 157vh var(--star-color), 8vw 104vh var(--star-color), 17vw 149vh var(--star-color), 195vw 183vh var(--star-color), 159vw 144vh var(--star-color), 44vw 25vh var(--star-color), 25vw 62vh var(--star-color), 74vw 132vh var(--star-color), 194vw 35vh var(--star-color), 168vw 104vh var(--star-color), 181vw 112vh var(--star-color), 120vw 76vh var(--star-color), 60vw 13vh var(--star-color), 122vw 35vh var(--star-color), 74vw 170vh var(--star-color), 15vw 136vh var(--star-color), 156vw 131vh var(--star-color), 100vw 75vh var(--star-color), 195vw 69vh var(--star-color), 159vw 141vh var(--star-color), 138vw 68vh var(--star-color), 86vw 107vh var(--star-color), 9vw 156vh var(--star-color), 140vw 161vh var(--star-color), 196vw 177vh var(--star-color), 5vw 114vh var(--star-color), 155vw 116vh var(--star-color), 173vw 68vh var(--star-color), 75vw 63vh var(--star-color), 113vw 5vh var(--star-color), 167vw 63vh var(--star-color), 77vw 142vh var(--star-color), 112vw 10vh var(--star-color), 130vw 127vh var(--star-color), 104vw 89vh var(--star-color), 181vw 147vh var(--star-color), 186vw 175vh var(--star-color), 140vw 11vh var(--star-color), 149vw 101vh var(--star-color), 95vw 9vh var(--star-color), 167vw 103vh var(--star-color), 54vw 80vh var(--star-color), 70vw 7vh var(--star-color), 19vw 73vh var(--star-color), 109vw 18vh var(--star-color), 44vw 80vh var(--star-color), 124vw 108vh var(--star-color), 124vw 167vh var(--star-color), 84vw 94vh var(--star-color), 170vw 124vh var(--star-color), 118vw 173vh var(--star-color), 110vw 76vh var(--star-color), 128vw 185vh var(--star-color), 71vw 51vh var(--star-color), 47vw 44vh var(--star-color), 11vw 87vh var(--star-color), 11vw 25vh var(--star-color), 11vw 89vh var(--star-color), 147vw 130vh var(--star-color), 185vw 118vh var(--star-color), 135vw 11vh var(--star-color), 80vw 151vh var(--star-color), 154vw 92vh var(--star-color), 91vw 104vh var(--star-color), 186vw 162vh var(--star-color), 75vw 173vh var(--star-color), 94vw 150vh var(--star-color), 85vw 186vh var(--star-color), 168vw 116vh var(--star-color), 128vw 160vh var(--star-color), 103vw 132vh var(--star-color), 132vw 162vh var(--star-color), 169vw 153vh var(--star-color), 97vw 162vh var(--star-color), 32vw 95vh var(--star-color), 108vw 198vh var(--star-color), 192vw 191vh var(--star-color), 20vw 101vh var(--star-color), 71vw 34vh var(--star-color), 153vw 125vh var(--star-color), 87vw 3vh var(--star-color), 113vw 185vh var(--star-color), 169vw 194vh var(--star-color), 45vw 12vh var(--star-color), 158vw 9vh var(--star-color), 121vw 137vh var(--star-color), 107vw 152vh var(--star-color), 11vw 103vh var(--star-color), 54vw 196vh var(--star-color), 149vw 4vh var(--star-color), 165vw 34vh var(--star-color), 54vw 44vh var(--star-color), 42vw 170vh var(--star-color), 19vw 77vh var(--star-color), 19vw 124vh var(--star-color), 108vw 10vh var(--star-color), 122vw 42vh var(--star-color), 133vw 96vh var(--star-color), 137vw 105vh var(--star-color), 121vw 61vh var(--star-color), 136vw 25vh var(--star-color), 163vw 79vh var(--star-color), 111vw 71vh var(--star-color), 38vw 163vh var(--star-color), 20vw 76vh var(--star-color), 200vw 135vh var(--star-color), 37vw 70vh var(--star-color), 166vw 45vh var(--star-color), 40vw 41vh var(--star-color), 68vw 189vh var(--star-color), 163vw 147vh var(--star-color), 125vw 144vh var(--star-color), 142vw 175vh var(--star-color), 75vw 63vh var(--star-color), 89vw 65vh var(--star-color), 182vw 87vh var(--star-color), 107vw 160vh var(--star-color), 21vw 107vh var(--star-color), 74vw 188vh var(--star-color), 113vw 87vh var(--star-color), 17vw 45vh var(--star-color), 108vw 105vh var(--star-color), 153vw 105vh var(--star-color), 39vw 31vh var(--star-color), 113vw 100vh var(--star-color), 9vw 72vh var(--star-color), 58vw 198vh var(--star-color), 45vw 95vh var(--star-color), 107vw 179vh var(--star-color), 128vw 114vh var(--star-color), 144vw 69vh var(--star-color), 29vw 176vh var(--star-color), 104vw 3vh var(--star-color), 99vw 108vh var(--star-color), 36vw 161vh var(--star-color), 125vw 24vh var(--star-color), 2vw 134vh var(--star-color), 104vw 91vh var(--star-color), 118vw 50vh var(--star-color), 179vw 128vh var(--star-color), 157vw 130vh var(--star-color), 3vw 12vh var(--star-color), 132vw 127vh var(--star-color), 187vw 158vh var(--star-color), 71vw 147vh var(--star-color), 136vw 106vh var(--star-color), 171vw 110vh var(--star-color), 102vw 30vh var(--star-color), 130vw 79vh var(--star-color), 46vw 75vh var(--star-color), 138vw 75vh var(--star-color), 166vw 174vh var(--star-color), 7vw 34vh var(--star-color), 86vw 27vh var(--star-color), 108vw 31vh var(--star-color), 145vw 10vh var(--star-color), 113vw 87vh var(--star-color), 58vw 173vh var(--star-color), 164vw 29vh var(--star-color), 87vw 158vh var(--star-color), 26vw 23vh var(--star-color), 44vw 143vh var(--star-color), 156vw 102vh var(--star-color), 108vw 120vh var(--star-color), 102vw 180vh var(--star-color), 51vw 56vh var(--star-color), 2vw 47vh var(--star-color), 179vw 187vh var(--star-color), 56vw 116vh var(--star-color), 181vw 76vh var(--star-color), 196vw 184vh var(--star-color), 156vw 142vh var(--star-color), 105vw 176vh var(--star-color), 105vw 197vh var(--star-color), 107vw 28vh var(--star-color), 99vw 69vh var(--star-color), 161vw 151vh var(--star-color), 104vw 162vh var(--star-color), 135vw 49vh var(--star-color), 33vw 120vh var(--star-color), 4vw 100vh var(--star-color), 99vw 72vh var(--star-color), 45vw 196vh var(--star-color), 25vw 169vh var(--star-color), 32vw 177vh var(--star-color), 54vw 52vh var(--star-color), 10vw 158vh var(--star-color), 122vw 145vh var(--star-color), 131vw 74vh var(--star-color), 88vw 153vh var(--star-color), 117vw 8vh var(--star-color), 61vw 19vh var(--star-color), 196vw 159vh var(--star-color), 79vw 156vh var(--star-color), 126vw 119vh var(--star-color), 33vw 75vh var(--star-color), 80vw 126vh var(--star-color), 28vw 39vh var(--star-color), 121vw 46vh var(--star-color), 178vw 123vh var(--star-color), 65vw 95vh var(--star-color), 123vw 176vh var(--star-color), 39vw 135vh var(--star-color), 156vw 165vh var(--star-color), 24vw 31vh var(--star-color), 101vw 58vh var(--star-color), 182vw 148vh var(--star-color), 99vw 12vh var(--star-color), 193vw 79vh var(--star-color), 80vw 114vh var(--star-color), 164vw 69vh var(--star-color), 9vw 139vh var(--star-color), 94vw 150vh var(--star-color), 149vw 31vh var(--star-color), 94vw 149vh var(--star-color), 82vw 121vh var(--star-color), 114vw 96vh var(--star-color), 107vw 73vh var(--star-color), 106vw 118vh var(--star-color), 97vw 72vh var(--star-color), 182vw 53vh var(--star-color), 145vw 118vh var(--star-color), 16vw 109vh var(--star-color), 106vw 150vh var(--star-color), 185vw 58vh var(--star-color), 68vw 10vh var(--star-color), 73vw 159vh var(--star-color), 186vw 122vh var(--star-color), 50vw 88vh var(--star-color), 149vw 54vh var(--star-color), 39vw 33vh var(--star-color), 89vw 161vh var(--star-color), 26vw 123vh var(--star-color), 105vw 25vh var(--star-color), 79vw 102vh var(--star-color), 114vw 174vh var(--star-color), 173vw 189vh var(--star-color), 105vw 77vh var(--star-color), 193vw 170vh var(--star-color), 51vw 107vh var(--star-color), 29vw 19vh var(--star-color), 166vw 163vh var(--star-color), 125vw 72vh var(--star-color), 189vw 169vh var(--star-color), 163vw 130vh var(--star-color), 177vw 81vh var(--star-color), 111vw 155vh var(--star-color), 185vw 170vh var(--star-color), 16vw 153vh var(--star-color), 66vw 57vh var(--star-color), 145vw 195vh var(--star-color), 10vw 92vh var(--star-color), 30vw 74vh var(--star-color), 125vw 189vh var(--star-color), 200vw 123vh var(--star-color), 154vw 150vh var(--star-color), 62vw 114vh var(--star-color), 186vw 141vh var(--star-color), 85vw 11vh var(--star-color), 58vw 105vh var(--star-color), 83vw 9vh var(--star-color), 156vw 74vh var(--star-color), 1vw 23vh var(--star-color), 131vw 81vh var(--star-color), 107vw 80vh var(--star-color), 141vw 175vh var(--star-color), 115vw 26vh var(--star-color), 126vw 83vh var(--star-color);
+  animation-duration: var(--stars-sm-speed);
+}
+.stars-sm:after {
+  animation-delay: calc(var(--stars-sm-speed) / -2);
+}
+.stars-md {
+  width: 2px;
+  height: 2px;
+}
+.stars-md:before, .stars-md:after {
+  box-shadow: 71vw 117vh var(--star-color), 134vw 174vh var(--star-color), 154vw 198vh var(--star-color), 180vw 62vh var(--star-color), 165vw 197vh var(--star-color), 161vw 151vh var(--star-color), 170vw 16vh var(--star-color), 75vw 9vh var(--star-color), 94vw 37vh var(--star-color), 13vw 62vh var(--star-color), 196vw 9vh var(--star-color), 170vw 120vh var(--star-color), 161vw 131vh var(--star-color), 12vw 118vh var(--star-color), 29vw 20vh var(--star-color), 108vw 112vh var(--star-color), 51vw 41vh var(--star-color), 157vw 38vh var(--star-color), 174vw 115vh var(--star-color), 46vw 71vh var(--star-color), 106vw 129vh var(--star-color), 184vw 133vh var(--star-color), 46vw 22vh var(--star-color), 146vw 126vh var(--star-color), 2vw 193vh var(--star-color), 53vw 122vh var(--star-color), 190vw 74vh var(--star-color), 43vw 31vh var(--star-color), 191vw 64vh var(--star-color), 74vw 172vh var(--star-color), 69vw 176vh var(--star-color), 139vw 92vh var(--star-color), 113vw 165vh var(--star-color), 6vw 14vh var(--star-color), 77vw 84vh var(--star-color), 139vw 163vh var(--star-color), 28vw 33vh var(--star-color), 76vw 42vh var(--star-color), 105vw 106vh var(--star-color), 63vw 142vh var(--star-color), 177vw 190vh var(--star-color), 84vw 89vh var(--star-color), 34vw 110vh var(--star-color), 175vw 84vh var(--star-color), 177vw 73vh var(--star-color), 70vw 167vh var(--star-color), 4vw 172vh var(--star-color), 5vw 128vh var(--star-color), 73vw 89vh var(--star-color), 42vw 122vh var(--star-color), 27vw 157vh var(--star-color), 199vw 64vh var(--star-color), 150vw 179vh var(--star-color), 83vw 94vh var(--star-color), 185vw 108vh var(--star-color), 131vw 68vh var(--star-color), 74vw 65vh var(--star-color), 84vw 15vh var(--star-color), 173vw 70vh var(--star-color), 79vw 162vh var(--star-color), 35vw 40vh var(--star-color), 82vw 8vh var(--star-color), 86vw 129vh var(--star-color), 45vw 130vh var(--star-color), 189vw 193vh var(--star-color), 6vw 163vh var(--star-color), 92vw 115vh var(--star-color), 97vw 30vh var(--star-color), 107vw 114vh var(--star-color), 38vw 42vh var(--star-color), 132vw 182vh var(--star-color), 58vw 184vh var(--star-color), 34vw 109vh var(--star-color), 46vw 153vh var(--star-color), 104vw 51vh var(--star-color), 106vw 63vh var(--star-color), 3vw 55vh var(--star-color), 61vw 160vh var(--star-color), 50vw 136vh var(--star-color), 187vw 84vh var(--star-color), 42vw 189vh var(--star-color), 154vw 195vh var(--star-color), 75vw 31vh var(--star-color), 13vw 37vh var(--star-color), 66vw 76vh var(--star-color), 63vw 101vh var(--star-color), 150vw 131vh var(--star-color), 168vw 66vh var(--star-color), 19vw 61vh var(--star-color), 113vw 175vh var(--star-color), 59vw 117vh var(--star-color), 81vw 145vh var(--star-color), 1vw 37vh var(--star-color), 21vw 171vh var(--star-color), 41vw 173vh var(--star-color), 159vw 55vh var(--star-color), 118vw 14vh var(--star-color), 63vw 43vh var(--star-color), 3vw 51vh var(--star-color), 189vw 152vh var(--star-color), 7vw 199vh var(--star-color), 132vw 144vh var(--star-color), 178vw 67vh var(--star-color), 78vw 137vh var(--star-color), 88vw 31vh var(--star-color), 49vw 75vh var(--star-color), 35vw 42vh var(--star-color), 134vw 23vh var(--star-color), 185vw 165vh var(--star-color), 139vw 153vh var(--star-color), 28vw 8vh var(--star-color), 192vw 116vh var(--star-color), 197vw 109vh var(--star-color), 183vw 195vh var(--star-color), 89vw 153vh var(--star-color), 104vw 144vh var(--star-color), 115vw 44vh var(--star-color), 189vw 189vh var(--star-color), 136vw 25vh var(--star-color), 123vw 39vh var(--star-color), 7vw 136vh var(--star-color), 120vw 57vh var(--star-color), 11vw 169vh var(--star-color), 151vw 83vh var(--star-color), 79vw 180vh var(--star-color), 55vw 40vh var(--star-color), 56vw 138vh var(--star-color), 141vw 41vh var(--star-color), 2vw 103vh var(--star-color), 124vw 163vh var(--star-color), 99vw 192vh var(--star-color), 150vw 87vh var(--star-color), 60vw 45vh var(--star-color), 142vw 51vh var(--star-color), 102vw 125vh var(--star-color), 175vw 22vh var(--star-color), 194vw 145vh var(--star-color), 118vw 192vh var(--star-color), 161vw 145vh var(--star-color), 83vw 22vh var(--star-color), 75vw 56vh var(--star-color), 80vw 45vh var(--star-color), 133vw 33vh var(--star-color), 165vw 176vh var(--star-color), 180vw 143vh var(--star-color), 46vw 176vh var(--star-color), 174vw 181vh var(--star-color), 169vw 149vh var(--star-color), 2vw 48vh var(--star-color), 81vw 44vh var(--star-color), 142vw 47vh var(--star-color), 141vw 182vh var(--star-color), 78vw 153vh var(--star-color), 142vw 84vh var(--star-color), 123vw 71vh var(--star-color), 2vw 25vh var(--star-color), 20vw 57vh var(--star-color), 104vw 145vh var(--star-color), 3vw 151vh var(--star-color), 130vw 28vh var(--star-color), 43vw 10vh var(--star-color), 165vw 149vh var(--star-color), 108vw 38vh var(--star-color), 82vw 71vh var(--star-color), 22vw 96vh var(--star-color), 1vw 1vh var(--star-color), 150vw 104vh var(--star-color), 167vw 113vh var(--star-color), 82vw 125vh var(--star-color), 180vw 197vh var(--star-color), 177vw 34vh var(--star-color), 58vw 166vh var(--star-color), 126vw 124vh var(--star-color), 118vw 113vh var(--star-color), 128vw 32vh var(--star-color), 2vw 83vh var(--star-color), 155vw 100vh var(--star-color), 166vw 25vh var(--star-color), 195vw 181vh var(--star-color), 92vw 101vh var(--star-color), 198vw 103vh var(--star-color), 187vw 181vh var(--star-color), 7vw 129vh var(--star-color), 108vw 154vh var(--star-color), 173vw 122vh var(--star-color), 137vw 62vh var(--star-color), 7vw 15vh var(--star-color), 25vw 80vh var(--star-color), 146vw 103vh var(--star-color), 41vw 153vh var(--star-color), 23vw 32vh var(--star-color), 44vw 175vh var(--star-color), 37vw 15vh var(--star-color), 187vw 20vh var(--star-color), 173vw 10vh var(--star-color), 192vw 104vh var(--star-color), 107vw 57vh var(--star-color), 167vw 78vh var(--star-color), 38vw 42vh var(--star-color), 79vw 51vh var(--star-color);
+  animation-duration: var(--stars-md-speed);
+}
+.stars-md:after {
+  animation-delay: calc(var(--stars-md-speed) / -2);
+}
+.stars-lg {
+  width: 4px;
+  height: 4px;
+}
+.stars-lg:before, .stars-lg:after {
+  box-shadow: 112vw 19vh var(--star-color), 167vw 67vh var(--star-color), 173vw 27vh var(--star-color), 183vw 7vh var(--star-color), 56vw 149vh var(--star-color), 22vw 16vh var(--star-color), 131vw 187vh var(--star-color), 167vw 58vh var(--star-color), 12vw 171vh var(--star-color), 49vw 95vh var(--star-color), 123vw 183vh var(--star-color), 148vw 131vh var(--star-color), 106vw 103vh var(--star-color), 107vw 196vh var(--star-color), 94vw 97vh var(--star-color), 61vw 106vh var(--star-color), 65vw 94vh var(--star-color), 1vw 123vh var(--star-color), 39vw 107vh var(--star-color), 182vw 182vh var(--star-color), 66vw 28vh var(--star-color), 166vw 175vh var(--star-color), 50vw 109vh var(--star-color), 84vw 172vh var(--star-color), 70vw 1vh var(--star-color), 52vw 5vh var(--star-color), 36vw 84vh var(--star-color), 165vw 159vh var(--star-color), 191vw 120vh var(--star-color), 106vw 39vh var(--star-color), 15vw 122vh var(--star-color), 33vw 57vh var(--star-color), 35vw 126vh var(--star-color), 123vw 185vh var(--star-color), 23vw 55vh var(--star-color), 18vw 27vh var(--star-color), 78vw 142vh var(--star-color), 169vw 158vh var(--star-color), 12vw 169vh var(--star-color), 117vw 100vh var(--star-color), 159vw 81vh var(--star-color), 81vw 167vh var(--star-color), 149vw 198vh var(--star-color), 161vw 188vh var(--star-color), 28vw 30vh var(--star-color), 68vw 116vh var(--star-color), 41vw 74vh var(--star-color), 161vw 108vh var(--star-color), 112vw 145vh var(--star-color), 44vw 105vh var(--star-color);
+  animation-duration: var(--stars-lg-speed);
+}
+.stars-lg:after {
+  animation-delay: calc(var(--stars-lg-speed) / -2);
+}
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+@keyframes exhaust {
+  to {
+    transform: scaleX(0.98) translateY(-1vmin);
+  }
+}
+@keyframes speed-up-exhaust {
+  from {
+    transform: scale(0.98, 1);
+  }
+  to {
+    transform: scale(0.96, 1.5);
+  }
+}
+@keyframes speed-up-ship {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(-3%);
+  }
+}

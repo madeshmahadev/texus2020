@@ -1,0 +1,487 @@
+@font-face {
+	font-family: 'Noticia';
+	src: url("../fonts/NoticiaText-Regular.ttf");
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Noticia';
+	src: url("../fonts/NoticiaText-Italic.ttf");
+	font-weight: normal;
+	font-style: italic
+}
+
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/Rubik-500.eot");
+	src: url("../fonts/Rubik-500d41d.eot?#iefix") format("embedded-opentype"), local("../fonts/Rubik Medium"), local("../fonts/Rubik-500"), url("../fonts/Rubik-500.woff2") format("woff2"), url("../fonts/Rubik-500.woff") format("woff"), url("../fonts/Rubik-500.ttf") format("truetype"), url("../fonts/Rubik-500.svg#Rubik") format("svg")
+}
+
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/Rubik-700.eot");
+	src: url("../fonts/Rubik-700d41d.eot?#iefix") format("embedded-opentype"), local("../fonts/Rubik Bold"), local("../fonts/Rubik-700"), url("../fonts/Rubik-700.woff2") format("woff2"), url("../fonts/Rubik-700.woff") format("woff"), url("../fonts/Rubik-700.ttf") format("truetype"), url("../fonts/Rubik-700.svg#Rubik") format("svg")
+}
+
+@font-face {
+	font-family: 'Teko';
+	font-weight: 400;
+	font-style: normal;
+	src: local("Teko Regular"), local("Teko-400"), url("../fonts/Teko-Regular.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Teko';
+	font-weight: 500;
+	font-style: normal;
+	src: local("Teko Medium"), local("Teko-500"), url("../fonts/Teko-Medium.woff2") format("woff2"), url("../fonts/Teko-Medium.woff") format("woff"), url("../fonts/Teko-Medium.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Work';
+	font-weight: 500;
+	font-style: normal;
+	src: local("Teko Medium"), local("Teko-500"), url("../fonts/Teko-Medium.woff2") format("woff2"), url("../fonts/Teko-Medium.woff") format("woff"), url("../fonts/Teko-Medium.ttf") format("truetype")
+}
+
+@keyframes example {
+	100% {
+		left: -50%
+	}
+	30% {
+		left: -50%
+	}
+	0% {
+		left: 100%
+	}
+}
+
+@keyframes mask {
+	100% {
+		-webkit-mask-position-x: 100%
+	}
+	0% {
+		-webkit-mask-position-x: 0%
+	}
+}
+
+@keyframes hand {
+	50% {
+		transform: translateY(30px)
+	}
+	0% {
+		transform: translateY(0px)
+	}
+}
+
+@keyframes fade {
+	50% {
+		opacity: 1
+	}
+	0% {
+		opacity: 0
+	}
+}
+
+@keyframes flicker {
+	14% {
+		opacity: 1
+	}
+	13% {
+		opacity: 0
+	}
+	12% {
+		opacity: 1
+	}
+	11% {
+		opacity: 0
+	}
+	10% {
+		opacity: 1
+	}
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-left {
+	background-color: #0f0f10
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right {
+	background-color: #161618
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right>div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 0
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right>div>img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right .parallax-1 {
+	padding-top: 80%;
+	width: 113%;
+	margin-left: -70%;
+	margin-top: -50%
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right .parallax-2 {
+	margin-left: -10%;
+	margin-top: -30%;
+	width: 43%;
+	padding-top: 60%
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right .parallax-3 {
+	margin-left: -32%;
+	margin-top: -33.7%;
+	width: 54%;
+	padding-top: 60%
+}
+
+body.dew-challenge .project-content .studio-wrap .scene .split-right .parallax-4 {
+	left: 23.7%;
+	top: 50%;
+	margin-top: -13.7%;
+	width: 19.4%;
+	padding-top: 44%
+}
+
+body.tech .project-content .studio-wrap .scene .split-left {
+	background-color: #342530
+}
+
+body.tech .project-content .studio-wrap .scene .split-right {
+	background-color: #dfd8d4
+}
+
+body.tech .project-content .studio-wrap .scene.variant>div {
+	background-color: #f9c474
+}
+
+body.tech .project-content .studio-wrap .scene.variant>div .text-title small {
+	color: #f1e5e3
+}
+
+body.tech .project-content .studio-wrap .scene.variant>div .text-title h2 {
+	color: #2c1f27
+}
+
+body.tech .project-content .studio-wrap .scene.variant>div .text-content {
+	color: #2c1f27
+}
+
+body.tech .project-content .studio-wrap .scene .text-content {
+	color: #f2ebe5
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-1 {
+	background-color: #f2ebe5;
+	width: 65%;
+	height: 0;
+	overflow: hidden;
+	padding-top: 40%;
+	left: 17.5%;
+	top: 50%;
+	z-index: 1;
+	margin-top: -20%;
+	position: absolute;
+	transform: rotate(15deg);
+	transform-origin: center
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-1>div {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 120%;
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	transform: rotate(-15deg)
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-2 {
+	left: 14%;
+	top: 58%;
+	position: absolute;
+	z-index: 1
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-3 {
+	right: 15%;
+	top: 70%;
+	position: absolute;
+	z-index: 1
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-4 {
+	top: 20%;
+	position: absolute;
+	z-index: 1;
+	left: 20%
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-5 {
+	background-color: #d0c6c0;
+	width: 65%;
+	height: 0;
+	overflow: hidden;
+	padding-top: 40%;
+	left: 19.5%;
+	top: 54%;
+	margin-top: -20%;
+	position: absolute;
+	z-index: 0;
+	transform: rotate(15deg);
+	transform-origin: center
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-6 {
+	position: absolute;
+	left: 17.5%;
+	top: 50%;
+	z-index: 0;
+	margin-top: -24%;
+	width: 50%;
+	height: 0;
+	padding-top: 30%;
+	transform: rotate(15deg)
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-6::before {
+	width: 100%;
+	height: 1px;
+	background-color: #d0c6c0;
+	content: "";
+	position: absolute;
+	left: -10%;
+	top: 0
+}
+
+body.tech .project-content .studio-wrap .scene .parallax-6::after {
+	width: 1px;
+	height: 100%;
+	background-color: #d0c6c0;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -10%
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene .split-left {
+	background-color: #312e33;
+	color: #fff
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene .split-left .text-title small {
+	color: #cca553
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene .split-left h2 {
+	color: #e8be96
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.split .split-right {
+	background-color: #2b272e;
+	align-items: center
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.split .split-right>div {
+	position: absolute;
+	width: 80%;
+	max-width: 450px
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.split .split-right>div video {
+	width: 100%
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-left {
+	background-color: #755236
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-left small {
+	color: #d49d81
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-left h2 {
+	color: #1d1f21
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-right {
+	overflow: hidden;
+	background-color: #19181a;
+	flex-wrap: nowrap
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-right>div {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	margin-top: -200px;
+	width: 100%;
+	height: auto
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-right .parallax-1 {
+	margin-left: -368px
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-right .parallax-2 {
+	margin-left: 68px
+}
+
+body.gamers-league.studio .project-content .studio-wrap .scene.cards.split .split-right .parallax-3 {
+	margin-left: -153px
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-left {
+	background-color: #f3f3eb
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .text-title small {
+	color: #af9773
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .text-content {
+	color: #34332e
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-right {
+	padding: 0;
+	background-color: #d8d6d3;
+	display: block
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-right>div {
+	position: absolute;
+	top: 50%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-right>div>img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-right .parallax-1 {
+	width: 100%;
+	padding-top: 83.2%;
+	top: 50%;
+	margin-top: -35%;
+	left: 0
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-right .parallax-2 {
+	left: 25%;
+	margin-top: -22%;
+	height: 0%;
+	padding-top: 9.5%;
+	width: 50%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.logo-studio .split-right .parallax-3 {
+	left: 25%;
+	margin-top: -22%;
+	height: 0%;
+	padding-top: 7%;
+	width: 50%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-left {
+	background-color: #34332e
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .text-title small {
+	color: #f3f3eb
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right {
+	padding: 0;
+	background: #22211f
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right>div {
+	position: absolute
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right>div>img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right .parallax-4 {
+	bottom: 0;
+	width: 140%;
+	left: -20%;
+	height: 0;
+	padding-top: 25%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right .parallax-3 {
+	bottom: 2%;
+	left: 57%;
+	width: 18%;
+	height: 0;
+	padding-top: 60%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right .parallax-2 {
+	height: 0;
+	width: 42%;
+	padding-top: 65%;
+	left: 50%;
+	margin-left: -18%;
+	bottom: 5%
+}
+
+body.simon-cuchillerias.studio .project-content .studio-wrap .scene.mobile-studio .split-right .parallax-1 {
+	height: 0;
+	width: 51%;
+	padding-top: 60%;
+	left: 50%;
+	margin-left: -48%;
+	bottom: 5%
+}
+
+body.guild-storm.studio .project-content .studio-wrap .scene .split-left {
+	background-color: #211819
+}
+
+body.guild-storm.studio .project-content .studio-wrap .scene .split-right {
+	background-color: black
+}
+
+body.guild-storm.studio .project-content .studio-wrap .scene .split-right>div {
+	position: absolute;
+	width: 150%;
+	max-width: 500px;
+	align-self: center
+}
+
+body.guild-storm.studio .project-content .studio-wrap .scene .split-right>div img {
+	width: 100%;
+	height: auto
+}
+
+@media (max-width: 600px) {
+	body.gamers-league.studio .studio-next h4 {
+		font-size: 30px !important
+	}
+}
